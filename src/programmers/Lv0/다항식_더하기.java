@@ -1,7 +1,5 @@
 package programmers.Lv0;
 
-import java.util.Arrays;
-
 public class 다항식_더하기 {
     public static void main(String[] args) {
         String polynomial = "3x + 7 + x";
@@ -12,7 +10,8 @@ public class 다항식_더하기 {
         System.out.println(solution(polynomial)); //3x"
         System.out.println(solution2(polynomial)); //3x"
     }
-// 흠... 다른 방식으로 한다고 한건데 차이가 없네......
+
+    // 흠... 다른 방식으로 한다고 한건데 차이가 없네......
     public static String solution(String polynomial) {
         String answer = "0";
 
@@ -32,15 +31,15 @@ public class 다항식_더하기 {
         }
 
         for (int i = 1; i < arr.length; i = i + 2) {
-                if (arr[i + 1].contains("x")) {
-                    if (arr[i + 1].equals("x")) {
-                        x += 1;
-                    } else {
-                        x += Integer.parseInt(arr[i + 1].replace("x", ""));
-                    }
+            if (arr[i + 1].contains("x")) {
+                if (arr[i + 1].equals("x")) {
+                    x += 1;
                 } else {
-                    num += Integer.parseInt(arr[i + 1]);
+                    x += Integer.parseInt(arr[i + 1].replace("x", ""));
                 }
+            } else {
+                num += Integer.parseInt(arr[i + 1]);
+            }
 
         }
 
@@ -49,7 +48,7 @@ public class 다항식_더하기 {
             if (x == 1) {
                 return "x";
             }
-                return x + "x";
+            return x + "x";
         }
         if (x == 1) {
             return "x + " + num;
