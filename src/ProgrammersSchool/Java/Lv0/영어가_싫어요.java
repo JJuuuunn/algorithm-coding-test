@@ -1,4 +1,4 @@
-package programmers.Lv0;
+package ProgrammersSchool.Java.Lv0;
 
 public class 영어가_싫어요 {
     public static void main(String[] args) {

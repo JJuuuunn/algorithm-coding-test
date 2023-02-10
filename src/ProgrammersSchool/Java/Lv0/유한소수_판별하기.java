@@ -1,4 +1,4 @@
-package programmers.Lv0;
+package ProgrammersSchool.Java.Lv0;
 
 public class 유한소수_판별하기 {
     public static void main(String[] args) {

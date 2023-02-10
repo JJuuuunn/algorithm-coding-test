@@ -1,4 +1,4 @@
-package programmers.Lv0;
+package ProgrammersSchool.Java.Lv0;
 
 public class 다항식_더하기 {
     public static void main(String[] args) {

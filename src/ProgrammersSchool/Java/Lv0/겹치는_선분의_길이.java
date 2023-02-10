@@ -1,4 +1,4 @@
-package programmers.Lv0;
+package ProgrammersSchool.Java.Lv0;
 
 public class 겹치는_선분의_길이 {
     public static void main(String[] args) {

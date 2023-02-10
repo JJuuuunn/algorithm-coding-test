@@ -1,8 +1,6 @@
-package programmers.Lv0;
+package ProgrammersSchool.Java.Lv0;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class 등수_매기기 {
     public static void main(String[] args) {
