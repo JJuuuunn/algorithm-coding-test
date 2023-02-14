@@ -1,6 +1,5 @@
 package ProgrammersSchool.Java.Lv1;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class 평균_구하기 {
@@ -8,7 +7,7 @@ public class 평균_구하기 {
         int[] arr = {1, 2, 3, 4};
         System.out.println(solution(arr)); // 2.5
 
-        arr = new int[] {5, 5};
+        arr = new int[]{5, 5};
         System.out.println(solution(arr)); // 5
     }
 
