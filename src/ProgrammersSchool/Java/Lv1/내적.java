@@ -22,10 +22,11 @@ public class 내적 {
         }
 
         return answer;
+        
         /*
             배열이 2개라서 stream 을 두번 사용해야되겠네 라고 생각했는데
             다른 사람의 풀이에서 index 값으로 두 배열의 값을 가져와 더하는 방법이 있었다.
-
+            
             return IntStream.range(0, a.length).map(idx -> a[idx] + b[idx]).sum();
          */
     }
