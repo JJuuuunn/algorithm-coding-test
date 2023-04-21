@@ -22,13 +22,9 @@ public class Main {
                 list.add(name);
             }
         }
-        Collections.sort(list);
-
         System.out.println(cnt);
 
-        for (String s : list) {
-            sb.append(s).append("\n");
-        }
+        list.stream().sorted().forEach(str -> sb.append(str).append("\n"));
         System.out.println(sb);
     }
 }
