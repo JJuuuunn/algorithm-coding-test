@@ -23,7 +23,6 @@ public class Main {
             }
         }
         System.out.println(cnt);
-
         list.stream().sorted().forEach(str -> sb.append(str).append("\n"));
         System.out.println(sb);
     }
