@@ -1,22 +1,22 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-		int N = sc.nextInt(); //N번째 영화
-		
-		System.out.println(search_N(N));
-	}
-	static int i = 666;
-	static int cnt = 0;
-	public static int search_N(int N) {
-			if (Integer.toString(i).contains("666")) {
-				cnt++;
-			}
-			if (cnt == N) {
-				return i;
-			}
-			i++;
-			return search_N(N);
-		}
-	}
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int N = Integer.parseInt(br.readLine());
+        br.close();
+
+        int num = 666;
+        int cnt = 0;
+        while(cnt != N) {
+            if (String.valueOf(num).contains("666")) {
+                cnt++;
+            }
+            num++;
+        }
+        System.out.println(num - 1);
+    }
+}
