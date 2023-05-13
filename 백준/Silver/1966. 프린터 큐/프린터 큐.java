@@ -22,7 +22,7 @@ public class Main {
             }
 
             while (true) {
-                int now[] = queue.remove();
+                int[] now = queue.remove();
                 boolean flag = true;
 
                 for (int q[] : queue) {
