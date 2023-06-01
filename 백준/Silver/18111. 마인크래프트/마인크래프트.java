@@ -26,19 +26,19 @@ public class Main {
         int height = 0;
         for (int i = max; i >= min; i--) {
             int t = 0;
-            int block = B;
+            int totalBlock = 0;
             for (int j = 0; j < N; j++) {
                 for (int k = 0; k < M; k++) {
-                    if (arr[j][k] > i) {
-                        block += (arr[j][k] - i);
-                        t += 2 * (arr[j][k] - i);
-                    } else if (arr[j][k] < i) {
-                        block -= (i - arr[j][k]);
-                        t += (i - arr[j][k]);
+                    int block = arr[j][k] - i;
+                    if (block > 0) {
+                        t += 2 * block;
+                    } else if (block < 0) {
+                        t -= block;
                     }
+                    totalBlock += (block);
                 }
             }
-            if (block >= 0 && time > t) {
+            if (totalBlock >= -B && time > t) {
                 height = i;
                 time = t;
             }
