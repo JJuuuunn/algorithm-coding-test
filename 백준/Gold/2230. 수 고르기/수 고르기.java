@@ -13,19 +13,25 @@ public class Main {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        int minNum = Integer.MAX_VALUE;
         Arrays.sort(arr);
 
-        for (int i = 0; i < N - 1; i++) {
-            for (int j = i + 1; j < N; j++) {
-                int num = arr[j] - arr[i];
-                if (num >= M) {
-                    if (num > minNum) {
-                        break;
-                    } else minNum = Math.min(minNum, num);
-                }
+        int p = 0;
+        int q = 1;
+        int minNum = Integer.MAX_VALUE;
+
+        while (q < N) {
+            int num = arr[q] - arr[p];
+            if (num < M) {
+                q++;
+            } else if (num == M) {
+                minNum = num;
+                break;
+            } else {
+                minNum = Math.min(num, minNum);
+                p++;
             }
         }
+
         System.out.println(minNum);
     }
 }
