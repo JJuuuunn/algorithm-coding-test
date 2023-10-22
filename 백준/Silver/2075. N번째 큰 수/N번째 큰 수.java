@@ -7,17 +7,23 @@ class Main {
         StringTokenizer st;
  
         int n = Integer.parseInt(br.readLine());
-        int[] arr = new int[n * n];
-        int idx =0;
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
  
+        st = new StringTokenizer(br.readLine());
         for(int i=0; i<n; i++) {
+            int temp = Integer.parseInt(st.nextToken());
+            pq.offer(temp);
+        }
+ 
+        for(int i=1; i<n; i++) {
             st = new StringTokenizer(br.readLine());
-            for(int j = 0; j < n; j++) {
-                arr[idx++] = Integer.parseInt(st.nextToken());
+            for(int j=0; j<n; j++) {
+                int temp = Integer.parseInt(st.nextToken());
+                pq.offer(temp);
+                pq.poll();
             }
         }
-        Arrays.sort(arr);
  
-        System.out.println(arr[n * n - n]);
+        System.out.println(pq.poll());
     }
 }
