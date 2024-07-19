@@ -9,16 +9,13 @@ public class Main {
         int n = Integer.parseInt(bf.readLine());
         StringTokenizer st = new StringTokenizer(bf.readLine());
 
-        // 배열 n 생성
         int[] arr = new int[n];
 
-        // 배열 n 에 값 담기
         for (int i = 0; i < n; i++) {
             int num = Integer.parseInt(st.nextToken());
             arr[i] = num;
         }
 
-        // binarySearch 하기 위해 정렬
         Arrays.sort(arr);
         
         int m = Integer.parseInt(bf.readLine());
