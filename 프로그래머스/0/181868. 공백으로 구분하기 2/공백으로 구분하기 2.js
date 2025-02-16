@@ -1,17 +1,19 @@
 function solution(my_string) {
-    return my_string.trim().split('').reduce((acc, char) => {
-        if (char !== ' ') {
-            if (acc.length === 0 || acc[acc.length - 1] === '') {
-                acc.push(char);
+    return my_string.trim()
+        .split('')
+        .reduce((r, v) => {
+            if (v !== ' ') {
+                if (r.length === 0 || r[r.length - 1] === '') {
+                    r.push(v);
+                } else {
+                    r[r.length - 1] += v;
+                }
             } else {
-                acc[acc.length - 1] += char;
+                if (r.length === 0 || r[r.length - 1] !== '') {
+                    r.push('');
+                }
             }
-        } else {
-            if (acc.length === 0 || acc[acc.length - 1] !== '') {
-                acc.push('');
-            }
-        }
-        return acc;
-    }, [])
-    .filter(word => word !== '');
+            return r;
+        }, [])
+        .filter(v => v !== '');
 }
