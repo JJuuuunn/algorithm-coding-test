@@ -1,9 +1,3 @@
 function solution(my_string, alp) {
-    return my_string.split("").reduce((r, v) => {
-        if (v === alp) {
-            v = v.toUpperCase();
-        }
-        
-        return r += v;
-    }, "");
+    return [...my_string].reduce((r, v) => v === alp ? r += v.toUpperCase() : r += v, "");
 }
